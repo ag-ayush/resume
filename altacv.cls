@@ -120,7 +120,7 @@
 \newcommand{\cvsection}[2][]{%
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
-  {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
+  {\color{heading}\Large\bfseries\MakeUppercase{#2}}\\[-1ex]%
   {\color{heading-line}\rule{\linewidth}{2pt}\par}\medskip
 }
 
