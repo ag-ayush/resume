@@ -9,7 +9,7 @@
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.3 or later is part of all distributions of LaTeX
 %% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
 
 %% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
@@ -21,12 +21,9 @@
 % \documentclass[10pt,a4paper,academicons]{altacv}
 
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
 \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages.
+%% AltaCV uses the fontawesome and academicon fonts and packages.
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
 %%
 %% Compile with LuaLaTeX for best results. If you
@@ -39,14 +36,13 @@
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
 % Change the font if you want to.
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
 
-% If using pdflatex:
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[default]{lato}
-
-% If using xelatex or lualatex:
-% \setmainfont{Lato}
+  % If using xelatex or lualatex:
+  % \setmainfont{Lato}
 
 % Change the colours if you want to
 \definecolor{Mulberry}{HTML}{72243D}
@@ -69,30 +65,27 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 %% sample.bib contains your publications
-\addbibresource{sample.bib}
+% \addbibresource{sample.bib}
 
 \begin{document}
 \name{AYUSH GOEL}
 \tagline{Software Engineer}
 % \photo{2.8cm}{profile-square}
 \personalinfo{%
-  % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
   \email{\href{mailto:ag.goelayush@gmail.com}{ag.goelayush@gmail.com}}
   \phone{(315) 572-6532}
-  % \mailaddress{Address, Street, 00000 County}
-  % \location{Location, COUNTRY}
   \homepage{\href{http://ayushgoel.me}{ayushgoel.me}}
   % \twitter{@twitterhandle}
-  \linkedin{\href{https://www.linkedin.com/in/ag-ayush/}{ag-ayush}}
   \github{\href{https://www.github.com/ag-ayush}{ag-ayush}}
+  \linkedin{\href{https://www.linkedin.com/in/ag-ayush/}{ag-ayush}}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
 %   \orcid{orcid.org/0000-0000-0000-0000}
 }
 
 %% Make the header extend all the way to the right, if you want.
 \begin{fullwidth}
-\makecvheader
+  \makecvheader
 \end{fullwidth}
 
 %% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
@@ -100,24 +93,19 @@
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 \cvsection[resume-sidebar]{Work Experience}
-
-\cveventnew{Student Affairs at R.I.T.}{Orientation Leader}{Responsible for facilitating the transition of a group of first year and transfers students representing multiple programs from across the university during New Student Orientation.}{August 2018}{Rochester, NY}
-
-% \divider
+  \cveventnew{Student Affairs at R.I.T}{Orientation Leader}{Responsible for facilitating the transition of a group of first year and transfers students representing multiple programs from across the university during New Student Orientation.}{August 2018}{Rochester, NY}
+  % \divider
 
 \cvsection{Education}
-\cveventnew{\href{https://www.rit.edu}{Rochester Institute of Technology}}{Bachelor of Science: \newline Double Major in Computer Science and Computational Mathematics}{\textbf{Cumalitive GPA:} 3.8/4.0 \newline \textbf{Awards:} Dean's List (2)}{2017 - 2022}{}
+  \cveventnew{\href{https://www.rit.edu}{Rochester Institute of Technology}}{Bachelor of Science: \newline Double Major in Computer Science and Computational Mathematics}{\textbf{Cumalitive GPA:} 3.8/4.0}{2017 - 2022}{}
 
 \cvsection{Projects}
-
-\cvevent{Smart Shades}{\href{https://www.github.com/ag-ayush/smart-window-shades}{github.com/ag-ayush/smart-window-shades}}{}{}
-A web service, written using Python flask, bootstrap, JavaScript and ajax, that allows one to control their window shades.
-The physical shades system was built by using a Raspberry Pi and a stepper motor.
-
-\divider
-
-\cvevent{Lane Follow Bot}{\href{https://www.github.com/ag-ayush/lane-follow-bot}{github.com/ag-ayush/lane-follow-bot}}{Fall 2018 Hackathon}{}
-This was a small software program written using Python and OpenCV to detect white lines on green grass and then output which direction to move in order to stay between the two lines.
+  \cvevent{Smart Shades}{\href{https://www.github.com/ag-ayush/smart-window-shades}{github.com/ag-ayush/smart-window-shades}}{}{}
+  A web service, written using Python flask, bootstrap, JavaScript and ajax, that allows one to control their window shades.
+  The physical shades system was built by using a Raspberry Pi and a stepper motor.
+  \smallskip\divider
+  \cvevent{Lane Follow Bot}{\href{https://www.github.com/ag-ayush/lane-follow-bot}{github.com/ag-ayush/lane-follow-bot}}{}{}
+  This was a small software program written using Python and OpenCV to detect white lines on green grass and then output which direction to move in order to stay between the two lines.
 
 \medskip
 

@@ -134,7 +134,7 @@
   \smallskip
   \textbf{\color{accent}#2}\par
   \smallskip
-  {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
+  {\ifstrequal{#3}{}{}{\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}}%
   \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}\par}
   \medskip
 }
@@ -230,6 +230,15 @@
   \smallskip
   {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#4}%
   \ifstrequal{#5}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#5}}\par}
+  \medskip
+}
+
+\newcommand{\cvachievementnew}[3]{%
+  {\large\color{emphasis}#1\par}
+  \smallskip
+  \makebox[0.5\linewidth][l]{\textbf{\color{accent}#2}}%
+  {\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}\par
+  % \textbf{\color{accent}#2 {\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}\par
   \medskip
 }
 
