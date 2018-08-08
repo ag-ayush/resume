@@ -226,7 +226,7 @@
   \smallskip
   \textbf{\color{accent}#2}\par
   \smallskip
-  \textbf{\small\color{body}#3}\par
+  \color{body}#3\par
   \smallskip
   {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#4}%
   \ifstrequal{#5}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#5}}\par}
