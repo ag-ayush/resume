@@ -1,131 +1,208 @@
-%%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.1.2, 1 February 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
 %
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%%
-
-%% If you need to pass whatever options to xcolor
-\PassOptionsToPackage{dvipsnames}{xcolor}
-
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-\documentclass[10pt,letterpaper,normalphoto]{altacv}
-
-%% AltaCV uses the fontawesome and academicon fonts and packages.
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
-%%
-%% Compile with LuaLaTeX for best results. If you
-%% want to use XeLaTeX, you may need to install
-%% Academicons.ttf in your operating system's font
-%% folder.
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% Change the page layout if you need to
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
 
-% Change the font if you want to.
-  % If using pdflatex:
-  \usepackage[utf8]{inputenc}
-  \usepackage[T1]{fontenc}
-  \usepackage[default]{lato}
-  % charter, helvet, newcent
-
-  % If using xelatex or lualatex:
-  % \setmainfont{lato}
-
-% Change the colours if you want to
-\definecolor{Mulberry}{HTML}{72243D}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{VividPurple}{HTML}{3E0097}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\definecolor{DarkBlue}{HTML}{17273d}
-\definecolor{LightBlue}{HTML}{155185}
-
-\colorlet{heading}{DarkBlue}
-\colorlet{heading-line}{LightBlue}
-\colorlet{accent}{DarkBlue}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
-
-%% sample.bib contains your publications
-% \addbibresource{sample.bib}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
-\name{AYUSH GOEL}
-\tagline{Software Engineer}
-% \photo{2.8cm}{profile-square}
-\personalinfo{%
-  % You can add your own with \printinfo{symbol}{detail}
-  \email{\href{mailto:ag.goelayush@gmail.com}{ag.goelayush@gmail.com}}
-  \phone{(315) 572-6532}
-  \homepage{\href{https://ayushgoel.com}{ayushgoel.com}}
-  \github{\href{https://www.github.com/ag-ayush}{ag-ayush}}
-  \linkedin{\href{https://www.linkedin.com/in/ag-ayush/}{ag-ayush}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Ayush}{Goel}{ \href{http://ayushgoel.com}{ayushgoel.com} | \href{mailto:ag.goelayush@gmail.com}{ag.goelayush@gmail.com} | 315.572.6532
 }
 
-%% Make the header extend all the way to the right, if you want.
-\begin{fullwidth}
-  \makecvheader
-\end{fullwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
-%% You can always just use \marginpar{...} if you do
-%% not need to align the top of the contents to any
-%% \cvsection title in the "main" bar.
-\cvsection[resume-sidebar]{Work Experience}
-  \cveventnew{Academic Support Center}{Supplemental Instruction Leader}{Responsible for planning, scheduling, and facilitating weekly study sessions for CSCI-141 students.}{August 2018 - Present}{Rochester, NY}
+\begin{minipage}[t]{0.30\textwidth}
 
-  \divider
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     OBJECTIVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \cveventnew{Student Affairs at R.I.T}{Orientation Leader}{Responsible for facilitating the transition of a group of first year and transfers students representing multiple programs from across the university during New Student Orientation.}{August 2018}{Rochester, NY}
-  % \divider
+\section{Objective}
+\textbf{Seeking a co-op / internship \\
+opportunity in Summer and/or Fall \\
+of 2019.}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cvsection{Projects}
-  \cvevent{Ride Board API}{\href{https://github.com/ag-ayush/RideBoardAPI}{github.com/ag-ayush/RideBoardAPI}}{}{}
-  A \textbf{RESTful} HTTP API developed for the CSH Ride Board application using \textbf{Python Flask}, \textbf{Flask-SQLAlchemy}, and \textbf{Flask-pyoidc}. The responses are produced in \textbf{JSON} format.
+\section{Education}
 
-  \divider
+\subsection{Rochester Institute of Technology }
+\descript{BS in Computer Science \\
+BS in Computational Mathematics}
+\location{Graduating May 2022}
+\location{GPA: 3.80}
+\sectionsep
 
-  \cvevent{Ride Board}{\href{https://www.github.com/ag-ayush/rideboard}{github.com/ag-ayush/rideboard}}{}{}
-  A web application developed for hosting large-scale events during which users would like to carpool in order to reach their destination.
-  The app was built using the RideBoard1API, \textbf{Python Flask}, \textbf{Flask-pyoidc} and \textbf{bootsrap}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \divider
+\section{Links}
+Github:// \href{https://github.com/ayush}{\bf ag-ayush} \\
+LinkedIn://  \href{https://www.linkedin.com/in/ag-ayush}{\bf ag-ayush} \\
 
-  \cvevent{Smart Shades}{\href{https://www.github.com/ag-ayush/smart-window-shades}{github.com/ag-ayush/smart-window-shades}}{}{}
-  A web service, written with \textbf{Python Flask}, \textbf{bootstrap}, \textbf{JavaScript} and \textbf{AJAX}, that allows one to control their window shades.
-  The physical shades system was built with a Raspberry Pi and a stepper motor.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \divider
+\section{Coursework}
+\textbf{Mechanics of Programming \\
+Principles of Data Management \\
+Numerical Analysis}
+% {\footnotesize \textit{\textbf{(Research Asst. \& Teaching Asst 2x) }}} \\
+% Unix Tools and Scripting \\
 
-  \cvevent{Lane Follow Bot}{\href{https://www.github.com/ag-ayush/lane-follow-bot}{github.com/ag-ayush/lane-follow-bot}}{}{}
-  A small software program written using \textbf{Python} and \textbf{OpenCV} to detect white lines on green grass and then output which direction to move in order to stay between the two lines.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \divider
+\section{Skills}
+\subsection{Languages}
+\textbf{Python \textbullet{} Java \textbullet{} C \textbullet{} MySQL \\}
 
-  \cveventnolink{Big Data and Employment}{}{}
-  Developed at ASA DataFest 2018, this was a \textbf{Java} application built to process datasets in CSV format.
-  The application took the large dataset from Indeed and custom datasets found online as input to produce the states that would be the best for you to work in based on your job interest, expereince, and other factors.
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
 
-\medskip
+\subsection{Tools}
+\textbf{git \textbullet{} Linux \textbullet{} Flask \textbullet{} Bootstrap \\
+AJAX \textbullet{} LATEX \textbullet{} Autodesk Inventor \\
+Markdown \textbullet{} Bash}
+\sectionsep
 
-\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACTIVITIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Activities}
+
+\subsection{Computer Science House}
+\descript{September 2017 - Present}
+\location{A university community of computing centred people focused on technical and social development of its members.}
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\subsection{FRC\textregistered Team 174}
+\descript{September 2015 - May 2017}
+\location{Led the team as the project manager, programming lead, and drive team coach.}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Academic Support Center}
+\descript{| Supplemental Instruction Leader }
+\location{August 2018 - Present | Rochester, NY}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}\item Aided students in historically difficult CS courses.
+  \item Planned and facilitated the weekly eview sessions for students.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Student Affairs at RIT}
+\descript{| Orientation Leader}
+\location{August 2018 | Rochester, NY}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}\item Responsible for facilitating the transition of a group of first year and
+transfers students representing multiple programs from across the
+university during New Student Orientation.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Ride Board}
+\location{\href{https://www.github.com/ag-ayush/rideboard}{github.com/ag-ayush/rideboard}}
+A web application developed for hosting large-scale events during which users would like to carpool in order to reach their destination.
+The app was built using \textbf{Flask-SQLAlchemy}, \textbf{PostgreSQL}, \textbf{Python Flask}, \textbf{Flask-pyoidc} and \textbf{bootsrap}.
+I learned about relational databases using SQLAlchemy, database design, and hosting databases with phpPgAdmin.
+\sectionsep
+
+\runsubsection{Ride Board API}
+\location{\href{https://github.com/ag-ayush/RideBoardAPI}{github.com/ag-ayush/RideBoardAPI}}
+A \textbf{RESTful} HTTP API developed for the CSH Ride Board application using \textbf{Python Flask}, \textbf{Flask-SQLAlchemy}, and \textbf{Flask-pyoidc}. The responses are produced in \textbf{JSON} format. I learned about APIs and parsing JSON.
+\sectionsep
+
+\runsubsection{Smart Shades}
+\location{\href{https://www.github.com/ag-ayush/smart-window-shades}{github.com/ag-ayush/smart-window-shades}}
+A web service, written with \textbf{Python Flask}, \textbf{bootstrap}, \textbf{JavaScript} and \textbf{AJAX}, that allows one to control their window shades. The physical shades system was built with a Raspberry Pi and a stepper motor. I learned about JavaScript and programming RaspberryPi.
+\sectionsep
+
+\runsubsection{Big Data and Employment}
+\location{}
+Developed at ASA DataFest 2018, this was a \textbf{Java} application built to process datasets in CSV format.
+The application took the large dataset from Indeed and custom datasets found online as input to produce the states that would be the best for you to work in based on your job interest, expereince, and other factors. I learned how to work with large datasets.
+\sectionsep
+
+\runsubsection{Lane Follow Bot}
+\location{\href{https://www.github.com/ag-ayush/lane-follow-bot}{github.com/ag-ayush/lane-follow-bot}}
+A small software program written using \textbf{Python} and \textbf{OpenCV} to detect white lines on green grass and then output which direction to move in order to stay between the two lines. I learned how to work with basics of OpenCV.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+\begin{tabular}{rll}
+2017-2018	   & Dean's List at RIT \\
+2017	   & Best External Data at DataFest, RIT \\
+\end{tabular}
+\sectionsep
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
