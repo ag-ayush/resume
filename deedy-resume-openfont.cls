@@ -42,7 +42,7 @@ Last Updated on \today
 % Name command
 \newcommand{\namesection}[3]{
 \centering{
-\fontsize{60pt}{80pt}
+\fontsize{70pt}{70pt}
 \fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1
 \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
 } \\[5pt]

@@ -24,7 +24,7 @@
 
 \LoadClass{extarticle}
 
-\RequirePackage[margin=2cm]{geometry}
+\RequirePackage[margin=1cm]{geometry}
 \RequirePackage{fontawesome}
 
 %% v1.1: Optionally load academicons
